@@ -7,3 +7,4 @@ int main() {
     printf("Возраст в секундах: %f\n", value*3.156e+7);
     return 0;
 }
+x
