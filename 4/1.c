@@ -1,10 +1,20 @@
 #include <stdio.h>
 
+const int HOUR_TO_MINUTES = 60;
+
+float value;
+
+void scan() {
+    printf("Введите время в минутах: ");
+    scanf("%f", &value);
+}
+
 int main() {
-    printf("Введите своё имя и фамилию: ");
-    char firstName[70];
-    char lastName[70];
-    scanf("%s%s", &firstName, &lastName);
-    printf("Фамилия: %s, Имя: %s\n", lastName, firstName);
+    scan();
+    while (value > 0) {
+        printf("Время в часах: %f\n", value / HOUR_TO_MINUTES);
+        scan();
+    }
+    printf("Работа завершена.\n");
     return 0;
 }

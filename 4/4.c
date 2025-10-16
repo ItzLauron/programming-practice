@@ -1,10 +1,21 @@
 #include <stdio.h>
 
+const double FOOT = 30.48;
+const double INCH = 0.393701;
+
+float value;
+
+void scan() {
+    printf("Введите высоту в сантиметрах: ");
+    scanf("%f", &value);
+}
+
 int main() {
-    printf("Введите имя и рост (в сантиметрах):");
-    char firstName[20];
-    float height;
-    scanf("%s%f", &firstName, &height);
-    printf("%s, ваш рост составляет %f метров\n", firstName, height/100);
+    scan();
+    while (value > 0) {
+        printf("%f см = %d футов, %f дюймов\n", value, (int) (value / FOOT), value * INCH);
+        scan();
+    }
+    printf("Работа завершена.\n");
     return 0;
 }

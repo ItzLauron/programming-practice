@@ -1,13 +1,23 @@
 #include <stdio.h>
 
-const double MILE = 1.609;
-const double GALLON = 3.785;
+int first, second;
+
+void scan() {
+    printf("%d %% %d равно %d\n", first, second, first % second);
+    printf("Введите следующее число для первого операнда (<= О для выхода из программы): ");
+    scanf("%d", &first);
+}
 
 int main() {
-    printf("Введите количество преодолённых миль и количество галлонов израсходного бензина:");
-    double miles, gallons;
-    scanf("%lf%lf", &miles, &gallons);
-    printf("Количество миль пройденных на одном галлоне: %.1lf\n", miles / gallons);
-    printf("Литров на 100 км: %.1lf\n", (GALLON * gallons) / ((MILE * miles) / 100));
+    printf("Эта программа вычисляет результаты деления по модулю.\n");
+    printf("Введите целое число, которое будет служить вторым операндом: ");
+    scanf("%d", &second);
+    printf("Теперь введите первьй операнд: ");
+    scanf("%d", &first);
+    scan();
+    while (first > 0) {
+        scan();
+    }
+    printf("Готово");
     return 0;
 }

@@ -1,16 +1,13 @@
 #include <stdio.h>
 
+const double MILE = 1.609;
+const double GALLON = 3.785;
+
 int main() {
-    printf("Введите объём в чашках: ");
-    int value;
-    scanf("%d", &value);
-    value /= 2;
-    printf("В пинтах: %d\n", value);
-    value *= 16;
-    printf("В унциях: %d\n", value);
-    value *= 2;
-    printf("В столовых ложках: %d\n", value);
-    value *= 3;
-    printf("В чайных ложках: %d\n", value);
+    printf("Введите количество преодолённых миль и количество галлонов израсходного бензина:");
+    double miles, gallons;
+    scanf("%lf%lf", &miles, &gallons);
+    printf("Количество миль пройденных на одном галлоне: %.1lf\n", miles / gallons);
+    printf("Литров на 100 км: %.1lf\n", (GALLON * gallons) / ((MILE * miles) / 100));
     return 0;
 }

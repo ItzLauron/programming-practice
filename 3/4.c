@@ -1,11 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    printf("Введите значение с плавающей запятой: ");
-    float value;
-    scanf("%f", &value);
-    printf("Запись с фиксированной запятой: %f\n", value);
-    printf("Экспоненциальная форма записи: %e\n", value);
-    printf("Двоично-экспоненциальная предствавление: %a\n", value);
+    printf("Введите имя и рост (в сантиметрах):");
+    char firstName[20];
+    float height;
+    scanf("%s%f", &firstName, &height);
+    printf("%s, ваш рост составляет %f метров\n", firstName, height/100);
     return 0;
 }

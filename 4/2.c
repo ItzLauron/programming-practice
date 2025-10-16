@@ -1,13 +1,12 @@
 #include <stdio.h>
-#include <string.h>
 
 int main() {
-    char firstName[70];
-    printf("Введите имя: ");
-    scanf("%s", &firstName);
-    printf("\"%s\"\n", firstName);
-    printf("\"%20s\"\n", firstName);
-    printf("\"%-20s\"\n", firstName);
-    printf("%*s\n", strlen(firstName) + 3, firstName);
+    printf("Введите число: ");
+    int value;
+    scanf("%d", &value);
+    float endValue = value + 10;
+    while (value <= endValue) {
+        printf("%d\n", value++);
+    }
     return 0;
 }

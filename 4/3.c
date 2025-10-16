@@ -1,9 +1,18 @@
 #include <stdio.h>
 
+int value;
+
+void scan() {
+    printf("Введите количество дней: ");
+    scanf("%d", &value);
+}
+
 int main() {
-    printf("Введите число с плавающей запятой: ");
-    float value;
-    scanf("%f", &value);
-    printf("В десятичной форме: %f, экспоненциальная форма: %e\n", value, value);
+    scan();
+    while (value > 0) {
+        printf("%d дней составляют %d недели и %d дня.\n", value, value/7, value%7);
+        scan();
+    }
+    printf("Работа завершена.\n");
     return 0;
 }
