@@ -2,6 +2,7 @@
 #include <string.h>
 
 int main() {
+    printf("Введите слово: ");
     char str[20];
     scanf("%20s", &str);
 

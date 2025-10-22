@@ -10,8 +10,8 @@ int main() {
 
     int i = 0;
     do {
-        printf("%d ", arr[i++]);
-    } while (i < 8);
+        printf("2^%d: %d, ", i, arr[i]);
+    } while (i++ < 7);
     printf("\n");
 
     return 0;

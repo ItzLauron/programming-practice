@@ -7,7 +7,7 @@ int main() {
     double sum = 0;
 
     for (int i = 0; i < 8; i++) {
-        printf("Введите число: ");
+        printf("Введите число (%d): ", i);
         double val;
         scanf("%lf", &val);
 

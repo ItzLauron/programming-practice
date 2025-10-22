@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main() {
+    printf("Введите 8 чисел: ");
     int nums[8];
     for (int i = 0; i < 8; i++) scanf("%d", &nums[i]);
 
