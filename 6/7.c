@@ -8,7 +8,7 @@ int main() {
     printf("Значение общей суммы начислений: %f\n", general);
     if (hours > 40) {
         general *= 1.5;
-        printf("Из")
+        printf("Из");
     }
     return 0;
 }
