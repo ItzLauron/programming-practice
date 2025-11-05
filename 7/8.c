@@ -42,8 +42,8 @@ wchar_t getChar(wchar_t ch) {
         case L'в': return L'-';
         case L'у': return L'*';
         case L'д': return L'/';
+        default: return ' ';
     }
-    return ' ';
 }
 
 
@@ -53,6 +53,6 @@ double getValue(wchar_t ch, double first, double second) {
         case L'в': return first - second;
         case L'у': return first * second;
         case L'д': return first / second;
+        default: return 0;
     }
-    return 0;
 }
