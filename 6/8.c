@@ -31,7 +31,11 @@ int main(void) {
         return 0;
     }
     double general = hours * tariffValue;
-    if (hours > 40) general *= 1.5;
+    printf("Ставка: %.3lf\n", general);
+    if (hours > 40) {
+        general *= 1.5;
+        printf("Ставка с учётом сверхъурочных: %.3lf\n", general);
+    }
 
     double generalCopy = general;
     double nalog = 0;
@@ -41,7 +45,7 @@ int main(void) {
     generalCopy -= 150;
     if (generalCopy > 0) nalog += generalCopy * 0.25;
 
-    printf("Ставка без учёта налогов: %.3lf, налоги: %.3lf, ставка с учётом налогов: %.3lf", general, nalog, general - nalog);
+    printf("Налоги: %.3lf\nСтавка с учётом налогов: %.3lf\n", nalog, general - nalog);
 
     return 0;
 }
