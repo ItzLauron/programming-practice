@@ -8,11 +8,11 @@ int main(void) {
     while ((ch = getwchar()) != WEOF) {
         if (ch < L' ') {
             switch (ch) {
-                case '\n':
+                case L'\n':
                     wprintf(L"\\n");
                     count = -2;
                     break;
-                case '\t':
+                case L'\t':
                     wprintf(L"\\t");
                     break;
                 default:
@@ -20,7 +20,7 @@ int main(void) {
             }
         } else putwchar(ch);
         wprintf(L" - %d ", ch);
-        if (++count % 10 == 0) wprintf(L"\n");
+        if (++count % 10 == 0) putwchar(L'\n');
     }
     return 0;
 }

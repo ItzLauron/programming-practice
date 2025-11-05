@@ -11,7 +11,7 @@ int main(void) {
     return 0;
 }
 
-char get_first(void) {
+char getFirst(void) {
     char ch;
     while (isspace(ch = getchar())) {}
     return ch;
