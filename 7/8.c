@@ -28,7 +28,7 @@ int main(void) {
         while (getwchar() != '\n') {}
         if (ch != L'д' && second != 0) {
             wprintf(L"%lf %lc %lf = %lf\n", first, getChar(ch), second, getValue(ch, first, second));
-        } else wprintf(L"Деление на 0 запрещено!");
+        } else wprintf(L"Деление на 0 запрещено!\n");
     }
 }
 
