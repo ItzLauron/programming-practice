@@ -5,6 +5,7 @@ int main(void) {
     setlocale(LC_ALL, "");
     int count = 0;
     wchar_t ch;
+    wprintf(L"Вводите символы (# - стоп программы): ");
 
     while ((ch = getwchar()) != L'#') {
         if (ch != L'\n') {

@@ -6,6 +6,8 @@ int main(void) {
     setlocale(LC_ALL, "");
     int countUpper = 0, countLower = 0, countOther = 0;
     wchar_t ch;
+    wprintf(L"Вводите символы (# - стоп программы): ");
+
     while ((ch = getwchar()) != L'#') {
         if (iswupper(ch)) countUpper++;
         else if (iswlower(ch)) countLower++;

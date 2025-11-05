@@ -9,6 +9,7 @@ void check(void);
 int main(void) {
     setlocale(LC_ALL, "");
     wchar_t ch;
+    wprintf(L"Вводите слова (# - стоп программы): ");
 
     while ((ch = getwchar()) != L'#') {
         if (iswalpha(ch)) wordLength++;

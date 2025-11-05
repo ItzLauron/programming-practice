@@ -5,6 +5,8 @@ int main(void) {
     setlocale(LC_ALL, "");
     int count = 0;
     wchar_t ch;
+    wprintf(L"Вводите символы (ctrl + d - стоп программы): ");
+
     while ((ch = getwchar()) != WEOF) {
         if (ch < L' ') {
             switch (ch) {
