@@ -1,23 +1,25 @@
-#include <stdio.h>
+#include <wchar.h>
+#include <locale.h>
 
-int main() {
-    char ch;
+int main(void) {
+    setlocale(LC_ALL, "");
+    wchar_t ch;
     int count = 0;
-    while ((ch = getchar()) != '#') {
+    while ((ch = getwchar()) != L'#') {
         switch (ch) {
             case '.':
-                putchar('!');
+                putwchar('!');
                 count++;
                 break;
             case '!':
-                printf("!!");
+                wprintf(L"!!");
                 count++;
                 break;
-            default: printf("%c", ch);
+            default: putwchar(ch);
         }
     }
 
-    printf("Количество произведённых замен: %d\n", count);
+    wprintf(L"Количество произведённых замен: %d\n", count);
 
     return 0;
 }
