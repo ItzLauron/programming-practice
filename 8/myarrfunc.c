@@ -1,9 +1,10 @@
 #include <limits.h>
 #include <stdio.h>
 
-void clearBuffer(void) {
+_Bool clearBuffer(void) {
     int c;
-    while ((c = getchar()) != '\n' && c != EOF) {}
+    while ((c = getchar()) != '\n') if (c == EOF) return true;
+	return false;
 }
 
 _Bool scanNumWithCheck(int *num) {
@@ -13,8 +14,7 @@ _Bool scanNumWithCheck(int *num) {
         return true;
     }
 
-    clearBuffer();
-    return false;
+    return clearBuffer();
 }
 
 void setSizeArr(int *size) {

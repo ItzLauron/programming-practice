@@ -1,4 +1,4 @@
-void clearBuffer(void);
+_Bool clearBuffer(void);
 
 void setSizeArr(int *size);
 void setArr(int *arr, int size);
