@@ -3,7 +3,6 @@
 
 void printMenu(void);
 _Bool getCharAndCheck(char *ch);
-_Bool sizeIsNotZero(int size);
 void executeFunctionByChar(int *arr, int size, char ch);
 
 int main(void) {
@@ -14,7 +13,10 @@ int main(void) {
     printMenu();
     while (getCharAndCheck(&ch)) {
         if (ch == 'a') setSizeArr(&size);
-        else if (ch >= 'b' && ch <= 'f' && sizeIsNotZero(size)) executeFunctionByChar(arr, size, ch);
+        else if (ch >= 'b' && ch <= 'f') {
+            if (size == 0) printf("Размер массива равен 0!\n");
+            else executeFunctionByChar(arr, size, ch);
+        }
         else printf("Не верная буква!\n");
     }
 
@@ -39,14 +41,6 @@ _Bool getCharAndCheck(char *ch) {
     *ch = c;
     clearBuffer();
     return c != EOF && c != 'g';
-}
-
-_Bool sizeIsNotZero(int size) {
-    if (size == 0) {
-        printf("Размер массива равен 0!\n");
-        return false;
-    }
-    return true;
 }
 
 void executeFunctionByChar(int *arr, int size, char ch) {
