@@ -1,5 +1,4 @@
 #include <wchar.h>
-#include <wctype.h>
 
 int isLetter(wchar_t ch) {
     if ((ch >= L'A' && ch <= L'Z') || (ch >= L'a' && ch <= L'z') ||
@@ -15,7 +14,7 @@ void count(void) {
     int shown[1114112];
 
     wchar_t ch;
-    while ((ch = getwchar()) != WEOF && index < 1000) if (!iswspace(ch) && ch < 1114112) {
+    while ((ch = getwchar()) != WEOF && index < 1000) if (!(ch == L'\n' || ch == L'\t' || ch == L' ') && ch < 1114112) {
         indexes[index++] = ch;
         count[ch]++;
     }
