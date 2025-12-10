@@ -12,7 +12,7 @@ void count(void) {
     int index = 0;
     wchar_t indexes[1000];
     int count[1114112];
-    bool shown[1114112];
+    int shown[1114112];
 
     wchar_t ch;
     while ((ch = getwchar()) != WEOF && index < 1000) if (!iswspace(ch) && ch < 1114112) {
@@ -25,7 +25,7 @@ void count(void) {
     for (int i = 0; i < index; i++) {
         wchar_t c = indexes[i];
         if (!shown[c]) {
-            shown[c] = true;
+            shown[c] = 1;
             wprintf(L"%-6lc %d\n", c, count[c]);
         }
     }
