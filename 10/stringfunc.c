@@ -10,11 +10,11 @@ int isLetter(wchar_t ch) {
 void count(void) {
     int index = 0;
     wchar_t indexes[1000];
-    int count[1114112];
-    int shown[1114112];
+    int count[0x11000];
+    int shown[0x11000];
 
     wchar_t ch;
-    while ((ch = getwchar()) != WEOF && index < 1000) if (!(ch == L'\n' || ch == L'\t' || ch == L' ') && ch < 1114112) {
+    while ((ch = getwchar()) != WEOF && index < 1000) if (!(ch == L'\n' || ch == L'\t' || ch == L' ') && ch < 0x11000) {
         indexes[index++] = ch;
         count[ch]++;
     }
